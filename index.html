@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Canvas para fogos de artifício (escondido até o final) -->
+    <canvas id="fireworks" class="hidden"></canvas>
+
+    <!-- Áudio do hino (escondido, toca no final) -->
+    <audio id="hino" src="https://archive.org/download/Hino_corinthians/Hino%20do%20Corinthians%20Edi%C3%A7%C3%A3o%20Especial%20Brasileir%C3%A3o%202005.mp3" preload="auto"></audio>
+
     <div id="initial" class="container">
-        <h1>Vamos criar um ritual para dar sorte nos dias de jogo do Corinthians?</h1>
-        <img src="shadow1.png" alt="Shadow com plaquinha 'para Renatinha'" class="pixel-art">
-        <button onclick="showNext()">Sim</button>
-        <button id="no" onmouseover="moveButton()">Não</button>
+        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
+        <h1 id="text1" class="hidden">Vamos criar um ritual para os dias de jogos do Corinthians?</h1>
+        <button id="continue" class="hidden" onclick="showNext()">Continue</button>
     </div>
 
     <div id="next" class="container hidden">
-        <img src="shadow2.png" alt="Shadow com camisa do Corinthians" class="pixel-art">
-        <h2>Aceita ir ao cinema neste sábado?</h2>
-        <button onclick="playHino()">Sim</button>
-        <button id="no2" onmouseover="moveButton2()">Não</button>
+        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
+        <h2 id="text2" class="hidden">Aceita ir ao cinema neste sábado?</h2>
+        <button id="yes" class="hidden" onclick="playFinal()">Sim</button>
+        <button id="no" class="hidden" onmouseover="moveButton()">Não</button>
     </div>
 
     <div id="final" class="hidden">
-        <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/9cIWcoQONfk?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
         <p>Uhul! Vamos ao cinema e vai Corinthians! 🖤🤍</p>
     </div>
 
