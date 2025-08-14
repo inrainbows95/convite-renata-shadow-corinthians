@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para Renatinha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="initial" class="container">
+        <h1>Vamos criar um ritual para dar sorte nos dias de jogo do Corinthians?</h1>
+        <img src="shadow1.png" alt="Shadow com plaquinha 'para Renatinha'" class="pixel-art">
+        <button onclick="showNext()">Sim</button>
+        <button id="no" onmouseover="moveButton()">Não</button>
+    </div>
+
+    <div id="next" class="container hidden">
+        <img src="shadow2.png" alt="Shadow com camisa do Corinthians" class="pixel-art">
+        <h2>Aceita ir ao cinema neste sábado?</h2>
+        <button onclick="playHino()">Sim</button>
+        <button id="no2" onmouseover="moveButton2()">Não</button>
+    </div>
+
+    <div id="final" class="hidden">
+        <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/9cIWcoQONfk?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>Uhul! Vamos ao cinema e vai Corinthians! 🖤🤍</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
