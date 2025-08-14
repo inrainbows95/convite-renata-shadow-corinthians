@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Canvas para fogos de artifício (escondido até o final) -->
-    <canvas id="fireworks" class="hidden"></canvas>
-
-    <!-- Áudio do hino (escondido, toca no final) -->
-    <audio id="hino" src="https://archive.org/download/Hino_corinthians/Hino%20do%20Corinthians%20Edi%C3%A7%C3%A3o%20Especial%20Brasileir%C3%A3o%202005.mp3" preload="auto"></audio>
-
-    <div id="initial" class="container">
-        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
-        <h1 id="text1" class="hidden">Vamos criar um ritual para os dias de jogos do Corinthians?</h1>
-        <button id="continue" class="hidden" onclick="showNext()">Continue</button>
+    <div id="screen1" class="container">
+        <img id="shadow" src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art hidden">
+        <h1 id="attention" class="hidden">Agora que consegui sua atenção</h1>
+        <button id="continue" class="hidden" onclick="showScreen2()">Continuar</button>
     </div>
 
-    <div id="next" class="container hidden">
-        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
-        <h2 id="text2" class="hidden">Aceita ir ao cinema neste sábado?</h2>
-        <button id="yes" class="hidden" onclick="playFinal()">Sim</button>
+    <div id="screen2" class="container hidden">
+        <p id="apology" class="hidden">Queria te pedir desculpas pelo meu sumiço. Parte foi porque estive ocupada, em outra porque fiquei frustrada, achando que tinha estragado tudo. Nessa acabei adiando mandar mensagem esperando um momento melhor. Eu gostei muito de ti, te acho linda, incrível, inteligente e engraçada. É sério! Juro que minha intenção sempre foi agir com cuidado pra não estragar nada... Dito isso, vamos criar um ritual para os dias de jogos do Corinthians?</p>
+        <p id="invitation" class="hidden">Aceita ir ao cinema neste sábado?</p>
+        <button id="yes" class="hidden" onclick="showFireworks()">Sim</button>
         <button id="no" class="hidden" onmouseover="moveButton()">Não</button>
     </div>
 
-    <div id="final" class="hidden">
-        <img src="shadow.gif" alt="Shadow the Hedgehog" class="pixel-art">
-        <p>Uhul! Vamos ao cinema e vai Corinthians! 🖤🤍</p>
+    <div id="screen3" class="container hidden">
+        <canvas id="fireworksCanvas"></canvas>
+        <audio id="hino" src="hino_corinthians.mp3" autoplay></audio>
+        <footer>Se ama Deus aceita, se ama o diabo só olhe</footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
